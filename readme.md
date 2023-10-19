@@ -6,7 +6,7 @@
 
 ## 기능
 
--
+- OMDb API를 이용하여 영화 목록 및 상세 정보 검색 기능 구현
 
 ## 사용 기술 및 라이브러리
 
@@ -20,6 +20,10 @@
 ### 라이브러리
 
 - [Reset.css](https://www.jsdelivr.com/package/npm/reset-css)(v5.0.2)
+
+### API
+
+- [OMDb API](https://www.omdbapi.com/)
 
 ### 익스텐션
 
