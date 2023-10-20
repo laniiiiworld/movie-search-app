@@ -5,11 +5,13 @@ const store = new Store({
   page: 1,
   pageMax: 1,
   movies: [],
+  loading: false,
 });
 
 export default store;
 
 export const searchMovies = async (page) => {
+  store.state.loading = true;
   store.state.page = page;
   if (page === 1) {
     store.state.movies = [];
@@ -26,4 +28,5 @@ export const searchMovies = async (page) => {
     ...store.state.movies, //
     ...Search,
   ];
+  store.state.loading = false;
 };
