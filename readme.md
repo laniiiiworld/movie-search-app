@@ -20,6 +20,7 @@
 ### 라이브러리
 
 - [Reset.css](https://www.jsdelivr.com/package/npm/reset-css)(v5.0.2)
+- dotenv(v16.3.1)
 
 ### API
 
