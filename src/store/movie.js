@@ -15,9 +15,9 @@ export const searchMovies = async (page) => {
   }
 
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=${process.env.APIKEY}&s=${store.state.searchText}&page=${page}`
+    `https://www.omdbapi.com/?apikey=${process.env.APIKEY}&s=${store.state.searchText}&page=${page}`
   );
-  const { Search } = await response.json();
+  const { Search = [] } = await response.json();
 
   store.state.movies = [
     ...store.state.movies, //
