@@ -2,11 +2,12 @@
 
 - OMDb API를 활용하여 만든 영화 검색 애플리케이션
 - JavaScript -> TypeScript로 마이그레이션
-- Demo:
+- Demo: [영화 검색 애플리케이션](https://movie-search-lani.vercel.app)
 
 ## 기능
 
 - OMDb API를 이용하여 영화 목록 및 상세 정보 검색 기능 구현
+- 영화 목록을 더 가져오기 위한 "View more.." 버튼 구현
 
 ## 사용 기술 및 라이브러리
 

@@ -16,13 +16,13 @@ export default class Search extends Component {
     $input.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter') return;
       if (!movieStore.state.searchText.trim()) return;
-      searchMovies(1);
+      searchMovies(movieStore.state.page);
     });
 
     const $button = this.el.querySelector('.btn');
     $button.addEventListener('click', () => {
       if (!movieStore.state.searchText.trim()) return;
-      searchMovies(1);
+      searchMovies(movieStore.state.page);
     });
   }
 }

@@ -161,3 +161,14 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.view-more {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.view-more.hide {
+  display: none;
+}
