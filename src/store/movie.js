@@ -5,6 +5,7 @@ const store = new Store({
   page: 1,
   pageMax: 1,
   movies: [],
+  movie: {},
   loading: false,
   message: 'Search for the movie title!',
 });
@@ -43,5 +44,17 @@ export const searchMovies = async (page) => {
     `;
   } finally {
     store.state.loading = false;
+  }
+};
+
+export const getMovieDetails = async (id) => {
+  try {
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.APIKEY}&i=${id}&plot=full`);
+    store.state.movie = await response.json();
+  } catch (error) {
+    store.state.message = `
+      Something is wrong. Check the network status first.<br>
+      If the problem persists, please contact the administrator.
+    `;
   }
 };

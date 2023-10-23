@@ -7,6 +7,7 @@ export default class MovieItem extends Component {
   render() {
     const { Poster, Title, Year, imdbID } = this.props.movie;
     this.el.setAttribute('href', `#/movie?id=${imdbID}`);
+    this.el.setAttribute('title', Title);
     this.el.classList.add('movie');
     this.el.style.backgroundImage = `url(${Poster})`;
     this.el.innerHTML = /* html */ `
