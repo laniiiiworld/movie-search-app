@@ -8,7 +8,7 @@ export default class TheHeader extends Component {
       state: {
         menus: [
           { name: 'Search', href: '#/' },
-          { name: 'Movie', href: '#/movie' },
+          { name: 'Movie', href: '#/movie?id=tt4520988' },
           { name: 'About', href: '#/about' },
         ],
       },
