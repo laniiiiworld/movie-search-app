@@ -25,6 +25,18 @@ body {
 
 }
 
+@media (max-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px;
+  }
+}
+
 /* common - button */
 .btn {
   height: 50px;
@@ -170,6 +182,20 @@ body {
   color: var(--color-white);
 }
 
+@media (max-width: 600px) {
+  .header {
+    padding: 14px 20px;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .header .github {
+    right: 20px;
+  }
+}
+
 /* Footer */
 .footer {
   padding: 40px 40px 60px;
@@ -204,6 +230,12 @@ body {
 
 .headline p {
   color: var(--color-white-30);
+}
+
+@media (max-width: 600px) {
+  .headline h1 {
+    font-size: 60px;
+  }
 }
 
 /* Search */
@@ -363,6 +395,27 @@ body {
   font-family: 'Oswald', sans-serif;
   color: var(--color-white);
   margin: 24px 0 6px;
+}
+
+@media (max-width: 1200px) {
+  .the-movie {
+    gap: 30px;
+  }
+
+  .the-movie .poster {
+    --width: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .the-movie {
+    display: block;
+  }
+
+  .the-movie .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
 }
 
 /* About */
