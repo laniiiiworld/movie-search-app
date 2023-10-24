@@ -1,4 +1,5 @@
 import { Component } from '../core/common';
+import aboutStore from '../store/about';
 
 export default class TheHeader extends Component {
   constructor() {
@@ -41,7 +42,7 @@ export default class TheHeader extends Component {
             .join('')}
         </ul>
       </nav>
-      <a class="github" href="${process.env.GITHUB_URL}"><i class="fa-brands fa-github"></i></a>
+      <a class="github" href="${aboutStore.state.repository}"><i class="fa-brands fa-github"></i></a>
     `;
   }
 }
