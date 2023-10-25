@@ -12,6 +12,7 @@
 - 영화 목록을 가져올 때 로딩 애니메이션 제공
 - JavaScript로 구현한 router 기능을 이용하여 메인(Search), 상세(Movie), About 페이지 이동
 - CSS로 상세 페이지 로딩 스켈레톤 구현
+- 인증정보(OMDb API Key) 보안 강화를 위해 Serverless 함수 사용
 
 ## 사용 기술 및 라이브러리
 
@@ -39,21 +40,63 @@
 
 - 설치
 
-```bash
-npm i -D parcel
-```
+  ```bash
+  npm i -D parcel
+  ```
 
 - package.json
 
-```json
-  "scripts": {
-    "dev": "parcel ./index.html",
-    "build": "parcel build ./index.html"
-  },
-```
+  ```json
+    "scripts": {
+      "dev": "parcel ./index.html",
+      "build": "parcel build ./index.html"
+    },
+  ```
 
 - 실행
 
-```bash
-npm run dev
-```
+  ```bash
+  npm run dev
+  ```
+
+### Serverless Function 사용을 위한 Vercel 구성
+
+- Vercel 설치
+
+  ```bash
+  npm i -D vercel
+  ```
+
+- node-fetch 설치
+
+  ```bash
+  npm i node-fetch@2
+  ```
+
+  - Vercel 패키지가 동작하는 NodeJS 환경에서 fetch함수를 사용하기 위해 설치
+  - CommonJS방식을 사용하기 위해 2버전을 지정하여 설치
+
+- package.json
+
+  ```json
+    "type": "module",
+    "scripts": {
+      //...
+      "vercel": "vercel dev",
+    },
+  ```
+
+- vercel.json 생성
+
+  ```json
+  {
+    "devCommand": "npm run dev",
+    "buildCommand": "npm run build"
+  }
+  ```
+
+- 실행
+
+  ```bash
+  npm run vercel
+  ```
