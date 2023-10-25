@@ -100,3 +100,7 @@
   ```bash
   npm run vercel
   ```
+
+## 유용한 사이트
+
+- [JSON → TypeScript 인터페이스로 변환](https://transform.tools/json-to-typescript)
