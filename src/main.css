@@ -162,8 +162,12 @@ body {
   color: var(--color-primary);
 }
 
-.header .github {
+.header .user {
+  width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-area);
+  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -172,14 +176,12 @@ body {
   transition: 0.3s;
 }
 
-.header .github:hover {
+.header .user:hover {
   transform: scale(1.2);
 }
 
-.header .github i {
-  font-size: 40px;
-  background-color: var(--color-black);
-  color: var(--color-white);
+header .user img {
+  width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -191,7 +193,7 @@ body {
     display: none;
   }
 
-  .header .github {
+  .header .user {
     right: 20px;
   }
 }

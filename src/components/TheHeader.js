@@ -42,7 +42,9 @@ export default class TheHeader extends Component {
             .join('')}
         </ul>
       </nav>
-      <a class="github" href="${aboutStore.state.repository}"><i class="fa-brands fa-github"></i></a>
+      <a href="#/about" class="user">
+        <img src="${aboutStore.state.photo}" alt="User">
+      </a>
     `;
   }
 }
