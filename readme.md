@@ -71,6 +71,7 @@
 
   ```bash
   npm i node-fetch@2
+  npm i -D @types/node-fetch
   ```
 
   - Vercel 패키지가 동작하는 NodeJS 환경에서 fetch함수를 사용하기 위해 설치
