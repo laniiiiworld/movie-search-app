@@ -11,7 +11,7 @@ export default class Search extends Component {
       <button class="btn btn-primary">Search!</button>
     `;
 
-    const $input = this.el.querySelector('input');
+    const $input = this.el.querySelector('input')!;
     $input.addEventListener('input', () => {
       movieStore.state.searchText = $input.value;
     });
@@ -21,7 +21,7 @@ export default class Search extends Component {
       searchMovies(movieStore.state.page);
     });
 
-    const $button = this.el.querySelector('.btn');
+    const $button = this.el.querySelector('.btn')!;
     $button.addEventListener('click', () => {
       if (!movieStore.state.searchText.trim()) return;
       searchMovies(movieStore.state.page);
