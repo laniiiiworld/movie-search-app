@@ -71,6 +71,7 @@
 
   ```bash
   npm i node-fetch@2
+  npm i -D @types/node-fetch
   ```
 
   - Vercel 패키지가 동작하는 NodeJS 환경에서 fetch함수를 사용하기 위해 설치
@@ -100,3 +101,7 @@
   ```bash
   npm run vercel
   ```
+
+## 유용한 사이트
+
+- [JSON → TypeScript 인터페이스로 변환](https://transform.tools/json-to-typescript)

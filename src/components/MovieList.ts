@@ -23,9 +23,9 @@ export default class MovieList extends Component {
       <div class="the-loader hide"></div>
     `;
     const $movies = this.el.querySelector('.movies');
-    $movies?.append(...movies.map((movie) => new MovieItem({ props: { movie } }).el));
+    $movies?.append(...movies.map((movie) => new MovieItem({ movie }).el));
 
-    const $loader = this.el.querySelector('.the-loader');
+    const $loader = this.el.querySelector('.the-loader')!;
     movieStore.state.loading
       ? $loader.classList.remove('hide') //
       : $loader.classList.add('hide');
